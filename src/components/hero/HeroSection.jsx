@@ -13,7 +13,7 @@ const HeroSection = () => {
           <p className="text-xl text-white mb-8">
             Curated selection of the finest wines from around the world
           </p>
-          <Button as="a" href="#" className="bg-gray-400">
+          <Button as="a" href="#" className="bg-gray-400 ">
             Explore Our Collection
           </Button>
         </div>

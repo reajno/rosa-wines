@@ -8,7 +8,7 @@ const NavBar = () => {
   const { width } = useWindowSize();
 
   return (
-    <nav className=" fixed w-full bg-bittersweet-400">
+    <nav className=" fixed w-full bg-bittersweet-400 z-50">
       <div className="p-5 relative flex justify-between items-center">
         {width > 768 ? <NavMenuLarge /> : <NavMenuSmall />}
 
