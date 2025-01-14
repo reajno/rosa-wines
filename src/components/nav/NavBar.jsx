@@ -3,13 +3,28 @@ import NavMenuLarge from "./navMenuLarge";
 import BrandLogo from "../BrandLogo";
 import Cart from "./Cart";
 import useWindowSize from "../../hooks/useWindowSize";
-
+import { Container, Box, HStack } from "@chakra-ui/react";
 const NavBar = () => {
   const { width } = useWindowSize();
 
   return (
-    <nav className=" fixed w-full bg-bittersweet-400 z-50">
-      <div className="p-5 relative flex justify-between items-center">
+    <Container
+      as="header"
+      fluid
+      position="fixed"
+      zIndex={50}
+      className=" bg-bittersweet-400"
+      py={6}
+      px={{ md: "14" }}
+    >
+      <HStack
+        mx="auto"
+        as="nav"
+        position="relative"
+        alignItems="center"
+        justify="space-between"
+        maxW={"1440px"}
+      >
         {width > 768 ? <NavMenuLarge /> : <NavMenuSmall />}
 
         <BrandLogo
@@ -19,8 +34,8 @@ const NavBar = () => {
         />
 
         <Cart />
-      </div>
-    </nav>
+      </HStack>
+    </Container>
   );
 };
 export default NavBar;
