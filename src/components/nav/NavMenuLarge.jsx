@@ -1,36 +1,35 @@
 import { Button } from "../ui/button";
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../ui/menu";
-import { Link, HStack } from "@chakra-ui/react";
+import { Link, HStack, Box } from "@chakra-ui/react";
 import { ChevronDown } from "lucide-react";
 
 const NavMenuLarge = () => {
   return (
-    <div className="flex gap-4">
+    <HStack>
       <MenuRoot>
         <MenuTrigger asChild>
           <HStack>
-            <Button variant="solid">
+            <Button variant="ghost">
               Menu
               <ChevronDown />
             </Button>
           </HStack>
         </MenuTrigger>
         <MenuContent>
-          <MenuItem> LINK 1</MenuItem>
-          <MenuItem> LINK 2</MenuItem>
-          <MenuItem> LINK 3</MenuItem>
+          <MenuItem asChild>
+            <Link href="#">Item 1</Link>
+          </MenuItem>
+          <MenuItem asChild>
+            <Link href="#">Item 2</Link>
+          </MenuItem>
         </MenuContent>
       </MenuRoot>
-      <Link href="/">
-        <Button>Sale</Button>
-      </Link>
-      <Link href="/">
-        <Button>About</Button>
-      </Link>
-      <Link href="/">
-        <Button>Contact</Button>
-      </Link>
-    </div>
+      <Button as="a" href="#" variant="ghost">
+        Sale
+      </Button>
+      <Button variant="ghost">About</Button>
+      <Button variant="ghost">Contact</Button>
+    </HStack>
   );
 };
 export default NavMenuLarge;

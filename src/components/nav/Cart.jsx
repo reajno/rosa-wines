@@ -13,14 +13,14 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
-import { IconButton } from "@chakra-ui/react";
-import { ShoppingCart } from "lucide-react";
+import { Box, IconButton } from "@chakra-ui/react";
+import { RiShoppingCartLine } from "react-icons/ri";
 
 const Cart = () => {
   const [cartOpen, setCartOpen] = useState(false);
 
   return (
-    <div>
+    <Box>
       <DrawerRoot
         open={cartOpen}
         placement={"end"}
@@ -29,8 +29,8 @@ const Cart = () => {
       >
         <DrawerBackdrop />
         <DrawerTrigger asChild>
-          <IconButton>
-            <ShoppingCart />
+          <IconButton colorPalette={"white"} variant="ghost">
+            <RiShoppingCartLine />
           </IconButton>
         </DrawerTrigger>
         <DrawerContent rounded="md">
@@ -58,7 +58,7 @@ const Cart = () => {
           <DrawerCloseTrigger />
         </DrawerContent>
       </DrawerRoot>
-    </div>
+    </Box>
   );
 };
 export default Cart;

@@ -2,6 +2,7 @@ import NavMenuSmall from "./NavMenuSmall";
 import NavMenuLarge from "./navMenuLarge";
 import BrandLogo from "../BrandLogo";
 import Cart from "./Cart";
+import Account from "./Account";
 import useWindowSize from "../../hooks/useWindowSize";
 import { Container, Box, HStack } from "@chakra-ui/react";
 const NavBar = () => {
@@ -32,8 +33,10 @@ const NavBar = () => {
             "absolute left-0 right-0 mx-auto max-w-20 flex justify-center"
           }
         />
-
-        <Cart />
+        <HStack>
+          <Account />
+          <Cart />
+        </HStack>
       </HStack>
     </Container>
   );

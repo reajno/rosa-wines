@@ -1,13 +1,13 @@
 import { chardonnay, pinotNoir, prosecco } from "@/utils/assets";
-import { Text, HStack, Container, Center } from "@chakra-ui/react";
+import { Text, HStack, Container, Center, Box } from "@chakra-ui/react";
 import CategoryCard from "./CategoryCard";
 
 const ProductSection = () => {
   return (
-    <section className="bg-slate-400">
+    <Box as="section" className="bg-slate-400">
       <Container py="4rem">
         <Center pb="3rem">
-          <Text as="h1" fontSize="2xl" fontWeight="bold">
+          <Text as="h1" textStyle="3xl" fontWeight="bold">
             Shop By Category
           </Text>
         </Center>
@@ -23,7 +23,7 @@ const ProductSection = () => {
           <CategoryCard title={"Sparkling"} src={prosecco} />
         </HStack>
       </Container>
-    </section>
+    </Box>
   );
 };
 export default ProductSection;

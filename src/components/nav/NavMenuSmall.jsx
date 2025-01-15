@@ -13,14 +13,14 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
-import { IconButton } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import { Menu } from "lucide-react";
 
 const NavMobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div>
+    <Box>
       <DrawerRoot
         open={menuOpen}
         placement={"start"}
@@ -58,7 +58,7 @@ const NavMobileMenu = () => {
           <DrawerCloseTrigger />
         </DrawerContent>
       </DrawerRoot>
-    </div>
+    </Box>
   );
 };
 export default NavMobileMenu;
