@@ -1,15 +1,26 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import NavBar from "./components/nav/NavBar";
-import HeroSection from "./components/hero/HeroSection";
-import CategorySection from "./components/CategorySection";
-import ProductFeatureSection from "./components/ProductFeatureSection";
+import NavSpacer from "./components/NavSpacer";
+import Home from "./components/home";
+import Login from "./components/user/login";
+import Register from "./components/user/register";
+import NotFound from "./components/notFound";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <HeroSection />
-      <CategorySection />
-      <ProductFeatureSection />
+      <BrowserRouter>
+        <NavBar />
+        <NavSpacer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          {/* <Route path="/logout" element={<Navigate to="/" replace />} /> */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
