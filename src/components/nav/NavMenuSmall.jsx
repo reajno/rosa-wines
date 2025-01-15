@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
 import { Box, IconButton } from "@chakra-ui/react";
-import { Menu } from "lucide-react";
+import { RiMenuLine } from "react-icons/ri";
 
 const NavMobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ const NavMobileMenu = () => {
         <DrawerBackdrop />
         <DrawerTrigger asChild>
           <IconButton>
-            <Menu />
+            <RiMenuLine />
           </IconButton>
         </DrawerTrigger>
         <DrawerContent rounded="md">

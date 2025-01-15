@@ -1,5 +1,5 @@
 import { Box, VStack, HStack, Image, Text } from "@chakra-ui/react";
-import { MoveRight } from "lucide-react";
+import { RiArrowRightLine } from "react-icons/ri";
 
 const CategoryCard = ({ title, src }) => {
   return (
@@ -18,7 +18,7 @@ const CategoryCard = ({ title, src }) => {
           <Text as={"h2"} textStyle="lg">
             {title}
           </Text>
-          <MoveRight />
+          <RiArrowRightLine />
         </HStack>
       </VStack>
     </Box>

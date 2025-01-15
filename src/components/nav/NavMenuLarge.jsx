@@ -1,7 +1,7 @@
+import { RiArrowDownLine } from "react-icons/ri";
 import { Button } from "../ui/button";
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../ui/menu";
 import { Link, HStack, Box } from "@chakra-ui/react";
-import { ChevronDown } from "lucide-react";
 
 const NavMenuLarge = () => {
   return (
@@ -11,7 +11,7 @@ const NavMenuLarge = () => {
           <HStack>
             <Button variant="ghost">
               Menu
-              <ChevronDown />
+              <RiArrowDownLine />
             </Button>
           </HStack>
         </MenuTrigger>

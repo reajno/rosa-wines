@@ -4,7 +4,7 @@ import BrandLogo from "../BrandLogo";
 import Cart from "./Cart";
 import Account from "./Account";
 import useWindowSize from "../../hooks/useWindowSize";
-import { Container, Box, HStack } from "@chakra-ui/react";
+import { Container, Box, HStack, AbsoluteCenter } from "@chakra-ui/react";
 const NavBar = () => {
   const { width } = useWindowSize();
 
@@ -14,7 +14,7 @@ const NavBar = () => {
       fluid
       position="fixed"
       zIndex={50}
-      className=" bg-bittersweet-400"
+      bgColor={"red.400"}
       py={6}
       px={{ md: "14" }}
     >
@@ -26,13 +26,10 @@ const NavBar = () => {
         justify="space-between"
         maxW={"1440px"}
       >
-        {width > 768 ? <NavMenuLarge /> : <NavMenuSmall />}
-
-        <BrandLogo
-          className={
-            "absolute left-0 right-0 mx-auto max-w-20 flex justify-center"
-          }
-        />
+        {width > 992 ? <NavMenuLarge /> : <NavMenuSmall />}
+        <AbsoluteCenter mx="auto" justifyContent="center">
+          <BrandLogo />
+        </AbsoluteCenter>
         <HStack>
           <Account />
           <Cart />

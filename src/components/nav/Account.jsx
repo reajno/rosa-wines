@@ -3,7 +3,13 @@ import { RiUserLine } from "react-icons/ri";
 
 const Account = () => {
   return (
-    <IconButton aria-label="account" colorPalette={"white"} variant="ghost">
+    <IconButton
+      as="a"
+      href="/login"
+      aria-label="account"
+      colorPalette={"white"}
+      variant="ghost"
+    >
       <RiUserLine />
     </IconButton>
   );
