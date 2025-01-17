@@ -15,9 +15,26 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(email + password);
+
+    try {
+      const res = await fetch("http://localhost:3000/api/login-user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
