@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "title": "Island Bushmint",
+    "description": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac",
+    "price": 32.83,
+    "rating": 4.7,
+    "availabilityStatus": "low-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+  },
+  {
+    "id": 2,
+    "title": "Hybrid Blackberry",
+    "description": "luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit",
+    "price": 28.41,
+    "rating": 4.3,
+    "availabilityStatus": "in-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/dddddd/000000"
+  },
+  {
+    "id": 3,
+    "title": "Thurber's Desertpeony",
+    "description": "leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio",
+    "price": 31.37,
+    "rating": 4.5,
+    "availabilityStatus": "low-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/ff4444/ffffff"
+  },
+  {
+    "id": 4,
+    "title": "Hinahina Kahakai",
+    "description": "adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus",
+    "price": 22.4,
+    "rating": 4.6,
+    "availabilityStatus": "low-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 5,
+    "title": "Ladies' Tobacco",
+    "description": "interdum venenatis turpis enim blandit mi in porttitor pede justo",
+    "price": 29.95,
+    "rating": 4.3,
+    "availabilityStatus": "low-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 6,
+    "title": "Showy Greenbright",
+    "description": "rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed",
+    "price": 37.12,
+    "rating": 4.3,
+    "availabilityStatus": "low-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 7,
+    "title": "St. Andrew's Cross",
+    "description": "in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere",
+    "price": 38.35,
+    "rating": 4.8,
+    "availabilityStatus": "sold-out",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+  },
+  {
+    "id": 8,
+    "title": "Plée's Hogwood",
+    "description": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum",
+    "price": 39.2,
+    "rating": 4.2,
+    "availabilityStatus": "in-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 9,
+    "title": "Trans-pecos Cliffbrake",
+    "description": "eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+    "price": 25.91,
+    "rating": 5.0,
+    "availabilityStatus": "low-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+  },
+  {
+    "id": 10,
+    "title": "Hybrid Violet",
+    "description": "sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam",
+    "price": 27.45,
+    "rating": 4.9,
+    "availabilityStatus": "in-stock",
+    "reviews": [
+      {
+        "rating": 4,
+        "comment": "The quality of the product is amazing!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "John Doe",
+        "reviewerEmail": "john.doe@example.com"
+      },
+      {
+        "rating": 5,
+        "comment": "Fast shipping, will buy again!",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Jane Smith",
+        "reviewerEmail": "jane.smith@example.com"
+      },
+      {
+        "rating": 3,
+        "comment": "Good value for money.",
+        "date": "2024-05-23T08:56:21.624Z",
+        "reviewerName": "Alice Johnson",
+        "reviewerEmail": "alice.johnson@example.com"
+      }
+    ],
+    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+  }
+]
