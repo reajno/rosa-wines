@@ -1,6 +1,6 @@
 import { chardonnay, pinotNoir, prosecco } from "@/utils/assets";
 import { Text, HStack, Container, Center, Box } from "@chakra-ui/react";
-import CategoryCard from "./CategoryCard";
+import CategoryCard from "../CategoryCard";
 
 const ProductSection = () => {
   return (

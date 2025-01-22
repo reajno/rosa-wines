@@ -1,5 +1,5 @@
 import { Box, Container } from "@chakra-ui/react";
-import Carousel from "./Carousel";
+import Carousel from "../Carousel";
 
 const ProductFeatureSection = () => {
   return (
