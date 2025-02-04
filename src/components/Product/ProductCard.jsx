@@ -1,26 +1,19 @@
-import {
-  Image,
-  Box,
-  Link,
-  Button,
-  VStack,
-  Center,
-  Text,
-} from "@chakra-ui/react";
+import { Image, Box, Button, VStack, Center, Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import AddToCartButton from "../Cart/AddToCartButton";
 
-const ProductCard = (props) => {
-  const { id, name, price, image, sku, onClick } = props;
-
+const ProductCard = ({ name, price, image, route, product }) => {
   return (
-    <VStack key={id} align="center">
-      <Image
-        src={image}
-        alt={name}
-        w="100%"
-        fit="cover"
-        objectPosition="center"
-      />
-
+    <VStack align="center">
+      <Box as={Link} to={`/products/${route}`}>
+        <Image
+          src={image}
+          alt={name}
+          w="100%"
+          fit="cover"
+          objectPosition="center"
+        />
+      </Box>
       <VStack w="100%" py={4} color="black">
         <Text fontSize={{ base: "sm" }} fontWeight="bold">
           {name}
@@ -28,9 +21,7 @@ const ProductCard = (props) => {
         <Text fontSize={{ lg: "lg" }}>
           $<span>{price}</span>
         </Text>
-        <Button colorPalette="green" as="a" size={"sm"} onClick={onClick}>
-          Add to Cart
-        </Button>
+        <AddToCartButton product={product} productName={name} />
       </VStack>
     </VStack>
   );

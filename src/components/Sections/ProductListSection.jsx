@@ -1,11 +1,11 @@
 import { VStack } from "@chakra-ui/react";
 
-import ProductList from "../Product/ProductList";
+import ProductCatalog from "../Product/ProductCatalog";
 
 const ProductListSection = () => {
   return (
-    <VStack bgColor="white">
-      <ProductList />
+    <VStack>
+      <ProductCatalog />
     </VStack>
   );
 };

@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { Link, Container, Box, Text, VStack, Flex } from "@chakra-ui/react";
+import { Container, Box, Text, VStack, Flex } from "@chakra-ui/react";
+
 const HeroSection = () => {
   return (
     <Container fluid h="70vh" alignContent="center" bg={"blue.700"}>
@@ -10,7 +12,7 @@ const HeroSection = () => {
         <Text textStyle="xl">
           Curated selection of the finest wines from around the world
         </Text>
-        <Button as="a" href="#" mt="4" className="bg-gray-400 ">
+        <Button as={Link} to="/products" mt="4" className="bg-gray-400 ">
           Explore Our Collection
         </Button>
       </VStack>

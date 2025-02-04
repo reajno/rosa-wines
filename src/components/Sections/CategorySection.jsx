@@ -1,17 +1,13 @@
 import { chardonnay, pinotNoir, prosecco } from "@/utils/assets";
 import { Text, HStack, Container, Center, Box } from "@chakra-ui/react";
 import CategoryCard from "../CategoryCard";
+import SectionHeading from "./SectionHeading";
 
 const ProductSection = () => {
   return (
     <Box as="section" className="bg-slate-400">
       <Container py="4rem">
-        <Center pb="3rem">
-          <Text as="h1" textStyle="3xl" fontWeight="bold">
-            Shop By Category
-          </Text>
-        </Center>
-
+        <SectionHeading title="Shop By Category" color="white" />
         <HStack
           gap={"1rem"}
           wrap={{ md: "nowrap" }}
