@@ -8,9 +8,10 @@ import {
   Fieldset,
   Input,
   Button,
-  Link,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -64,9 +65,9 @@ const Login = () => {
         </Fieldset.Root>
         <Text as="p">
           Not a member? {""}
-          <Link href="/register" colorPalette={"green"}>
+          <Text as={Link} to="/register" fontWeight="bold" color="green.400">
             Register
-          </Link>
+          </Text>
         </Text>
       </VStack>
     </Container>

@@ -1,9 +1,10 @@
 import { brandLogo } from "@/utils/assets";
-import { Link, Image } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const BrandLogo = ({ className }) => {
+const BrandLogo = () => {
   return (
-    <Link href="/" className={className}>
+    <Link to="/">
       <Image src={brandLogo} fit={"contain"} width={"100px"} />
     </Link>
   );
