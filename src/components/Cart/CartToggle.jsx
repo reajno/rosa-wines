@@ -1,7 +1,5 @@
 import { useState } from "react";
-
 import {
-  DrawerActionTrigger,
   DrawerBackdrop,
   DrawerBody,
   DrawerCloseTrigger,
@@ -13,21 +11,21 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
-import { Box, IconButton } from "@chakra-ui/react";
+import { Box, IconButton, Text } from "@chakra-ui/react";
 import { RiShoppingCartLine } from "react-icons/ri";
 import Cart from "./CartContent";
 import useCartStore from "@/hooks/useCartStore";
 
 const CartToggle = () => {
   const [cartOpen, setCartOpen] = useState(false);
-  const { clearCart } = useCartStore();
+  const { totalItems } = useCartStore();
   return (
     <Box>
       <DrawerRoot
         open={cartOpen}
         placement={"end"}
         onOpenChange={(e) => setCartOpen(e.open)}
-        size={"md"}
+        size={{ base: "md", md: "sm" }}
       >
         <DrawerBackdrop />
         <DrawerTrigger asChild>
@@ -42,13 +40,11 @@ const CartToggle = () => {
           <DrawerBody>
             <Cart />
           </DrawerBody>
-          <DrawerFooter>
-            <Button variant="outline" onClick={clearCart}>
-              Clear Cart
-            </Button>
-            <DrawerActionTrigger asChild>
-              <Button variant="solid">Close</Button>
-            </DrawerActionTrigger>
+          <DrawerFooter justifyContent="space-between">
+            <Text fontSize="lg">
+              TOTAL: $<span>{totalItems().price} </span>AUD
+            </Text>
+            <Button variant="solid">Checkout</Button>
           </DrawerFooter>
           <DrawerCloseTrigger />
         </DrawerContent>
