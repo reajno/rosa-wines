@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "sku": "QO91W05O",
     "title": "Island Bushmint",
     "description": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac",
     "price": 32.83,
@@ -29,10 +30,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 2,
+    "sku": "GA28M90C",
     "title": "Hybrid Blackberry",
     "description": "luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit",
     "price": 28.41,
@@ -61,10 +63,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/dddddd/000000"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 3,
+    "sku": "RE15I06B",
     "title": "Thurber's Desertpeony",
     "description": "leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio",
     "price": 31.37,
@@ -93,10 +96,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/ff4444/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 4,
+    "sku": "YY41V65L",
     "title": "Hinahina Kahakai",
     "description": "adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus",
     "price": 22.4,
@@ -125,10 +129,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 5,
+    "sku": "ZJ21D74T",
     "title": "Ladies' Tobacco",
     "description": "interdum venenatis turpis enim blandit mi in porttitor pede justo",
     "price": 29.95,
@@ -157,10 +162,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 6,
+    "sku": "SQ68B84C",
     "title": "Showy Greenbright",
     "description": "rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed",
     "price": 37.12,
@@ -189,10 +195,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 7,
+    "sku": "NY17G67V",
     "title": "St. Andrew's Cross",
     "description": "in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere",
     "price": 38.35,
@@ -221,10 +228,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 8,
+    "sku": "WC66Y12X",
     "title": "Plée's Hogwood",
     "description": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum",
     "price": 39.2,
@@ -253,10 +261,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/5fa2dd/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 9,
+    "sku": "DO18K26J",
     "title": "Trans-pecos Cliffbrake",
     "description": "eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "price": 25.91,
@@ -285,10 +294,11 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   },
   {
     "id": 10,
+    "sku": "XX82R08M",
     "title": "Hybrid Violet",
     "description": "sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam",
     "price": 27.45,
@@ -317,6 +327,6 @@
         "reviewerEmail": "alice.johnson@example.com"
       }
     ],
-    "image": "http://dummyimage.com/480x600.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/480x600.png/efefef/cc0000"
   }
 ]
