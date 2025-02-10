@@ -1,12 +1,12 @@
 import { Container } from "@chakra-ui/react";
-import ProductListSection from "../Sections/ProductListSection";
-import SectionHeading from "../Sections/SectionHeading";
-
+import { useParams } from "react-router-dom";
+import ProductCatalog from "../Product/ProductCatalog";
 const Products = () => {
+  const params = useParams();
+
   return (
     <Container fluid as="section" bgColor="white" py="4rem" px={0}>
-      <SectionHeading title="Our Wines" />
-      <ProductListSection />
+      <ProductCatalog type={params.type} />
     </Container>
   );
 };

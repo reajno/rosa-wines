@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom";
-import products from "../../MOCK_DATA.json";
+import { useLoaderData } from "react-router-dom";
 import {
   SimpleGrid,
   Image,
@@ -14,14 +13,12 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import { RiStarFill } from "react-icons/ri";
-import useCartStore from "../../hooks/useCartStore";
 import AddToCartButton from "../Cart/AddToCartButton";
 
 const ProductDetail = () => {
-  const { addToCart } = useCartStore();
-  const params = useParams();
+  const product = useLoaderData();
+  if (!product) return null;
 
-  const product = products.find((item) => item.sku === params.sku);
   return (
     <>
       <Container bgColor="white">
@@ -35,7 +32,7 @@ const ProductDetail = () => {
             <Box flex={1}>
               <Image
                 src={product.image}
-                alt={product.title}
+                alt={product.name}
                 borderRadius="lg"
                 w="100%"
               />
@@ -49,7 +46,7 @@ const ProductDetail = () => {
                 fontSize={{ base: "xl", md: "2xl" }}
                 fontWeight="bold"
               >
-                {product.title}
+                {product.name}
               </Text>
               {/* Product Reviews */}
               <HStack gap={1}>
@@ -76,7 +73,7 @@ const ProductDetail = () => {
               <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" my={4}>
                 {product.description}
               </Text>
-              <AddToCartButton product={product} productName={product.title} />
+              <AddToCartButton item={product} />
             </VStack>
           </Stack>
         </Box>
