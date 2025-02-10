@@ -11,7 +11,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from "../ui/button";
-import { Box, IconButton, Text } from "@chakra-ui/react";
+import { Box, IconButton, Text, Float, Badge } from "@chakra-ui/react";
 import { RiShoppingCartLine } from "react-icons/ri";
 import Cart from "./CartContent";
 import useCartStore from "@/hooks/useCartStore";
@@ -31,6 +31,13 @@ const CartToggle = () => {
         <DrawerTrigger asChild>
           <IconButton colorPalette={"white"} variant="ghost">
             <RiShoppingCartLine />
+            {totalItems().quantity !== 0 ? (
+              <Float>
+                <Badge colorPalette="white">{totalItems().quantity}</Badge>
+              </Float>
+            ) : (
+              ""
+            )}
           </IconButton>
         </DrawerTrigger>
         <DrawerContent rounded="md">
@@ -40,7 +47,7 @@ const CartToggle = () => {
           <DrawerBody>
             <Cart />
           </DrawerBody>
-          <DrawerFooter justifyContent="space-between">
+          <DrawerFooter justifyContent="space-between" py={4}>
             <Text fontSize="lg">
               TOTAL: $<span>{totalItems().price} </span>AUD
             </Text>
