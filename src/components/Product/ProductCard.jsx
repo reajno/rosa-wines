@@ -2,10 +2,12 @@ import { Image, Box, Button, VStack, Center, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import AddToCartButton from "../Cart/AddToCartButton";
 
-const ProductCard = ({ name, price, image, route, product }) => {
+const ProductCard = ({ item }) => {
+  const { name, price, image, slug } = item;
+
   return (
     <VStack align="center">
-      <Box as={Link} to={`/products/${route}`}>
+      <Box as={Link} to={`/products/${slug}`}>
         <Image
           src={image}
           alt={name}
@@ -21,7 +23,7 @@ const ProductCard = ({ name, price, image, route, product }) => {
         <Text fontSize={{ lg: "lg" }}>
           $<span>{price}</span>
         </Text>
-        <AddToCartButton product={product} productName={name} />
+        <AddToCartButton item={item} />
       </VStack>
     </VStack>
   );
