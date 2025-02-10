@@ -6,6 +6,7 @@ import {
   Image,
   Group,
   Text,
+  Float,
 } from "@chakra-ui/react";
 import useCartStore from "../../hooks/useCartStore";
 
@@ -31,7 +32,7 @@ const Cart = () => {
                       borderRadius="md"
                     />
                     <Text fontSize={"md"} fontWeight="bold">
-                      {item.title}
+                      {item.name}
                     </Text>
                   </HStack>
                   {/* Price + Qty */}
@@ -56,8 +57,8 @@ const Cart = () => {
                         colorPalette="white"
                         variant="outline"
                       >
-                  -
-                </Button>
+                        -
+                      </Button>
 
                       <Text minWidth="50px" textAlign="center">
                         {item.quantity}
@@ -68,7 +69,7 @@ const Cart = () => {
                         variant="outline"
                       >
                         -
-                </Button>
+                      </Button>
                     </HStack>
                   </VStack>
                 </HStack>

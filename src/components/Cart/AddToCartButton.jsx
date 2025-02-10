@@ -2,16 +2,17 @@ import useCartStore from "@/hooks/useCartStore";
 import { Button } from "../ui/button";
 import { toaster } from "../ui/toaster";
 
-const AddToCartButton = ({ product, productName }) => {
+const AddToCartButton = ({ item }) => {
+  const { name } = item;
   const { addToCart } = useCartStore();
   return (
     <Button
       colorPalette="green"
       size="lg"
       onClick={() => {
-        addToCart(product);
+        addToCart(item);
         toaster.create({
-          description: `${productName} was added to your cart`,
+          description: `${name} was added to your cart`,
           type: "success",
         });
       }}

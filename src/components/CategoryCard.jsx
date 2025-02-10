@@ -1,10 +1,12 @@
 import { Box, VStack, HStack, Image, Text } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const CategoryCard = ({ title, src }) => {
   return (
     <Box
-      as={"a"}
+      as={Link}
+      to={`/products/category/${title.toLowerCase()}`}
       maxW={{
         base: "calc(50vw - 1.5rem)",
         md: "calc((100vw - 5rem) / 3)",
