@@ -4,15 +4,11 @@ import { Link } from "react-router-dom";
 
 const Account = () => {
   return (
-    <IconButton
-      as={Link}
-      to="/login"
-      aria-label="account"
-      colorPalette={"white"}
-      variant="ghost"
-    >
-      <RiUserLine />
-    </IconButton>
+    <Link to="/login">
+      <IconButton aria-label="account" colorPalette={"white"} variant="ghost">
+        <RiUserLine />
+      </IconButton>
+    </Link>
   );
 };
 export default Account;
