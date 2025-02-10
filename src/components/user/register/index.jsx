@@ -6,19 +6,27 @@ import {
   Fieldset,
   Input,
   Button,
-  Link,
 } from "@chakra-ui/react";
 import { Field } from "@/components/ui/field";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+import useAuth from "@/hooks/useAuth";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { register } = useAuth();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    console.log(email + " " + password);
+
+    try {
+      await register(email, password);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -48,9 +56,9 @@ const Register = () => {
         </Fieldset.Root>
         <Text as="p">
           Already have an account? {""}
-          <Link href="/register" colorPalette={"green"}>
-            Sign in
-          </Link>
+          <Text as={Link} to="/login" fontWeght="bold" color="green.400">
+            Sign In
+          </Text>
         </Text>
       </VStack>
     </Container>
