@@ -1,5 +1,7 @@
 import { Field } from "@/components/ui/field";
 import { PasswordInput } from "@/components/ui/password-input";
+import { toaster } from "@/components/ui/toaster";
+import useAuth from "@/hooks/useAuth";
 import {
   Box,
   Container,
@@ -10,31 +12,37 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
+// user: yesiy37805@sectorid.com
+// pass: qwerty123
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { isLoading, login, logout } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/login-user", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      const data = await login(email, password);
 
-      const data = await res.json();
-      console.log(data);
+      if (data.user) {
+        const redirectPath = location.state?.from?.pathname || "/";
+        navigate(redirectPath, { replace: true });
+      }
+      toaster.create({
+        description: `Welcome back, ${data.user.email}!`,
+        type: "success",
+      });
     } catch (err) {
-      console.log(err);
+      toaster.create({
+        description: `${err.message}`,
+        type: "error",
+      });
     }
   };
 
@@ -62,10 +70,13 @@ const Login = () => {
           <Button type="submit" onClick={handleLogin}>
             Submit
           </Button>
+          <Button type="submit" onClick={logout}>
+            Logout
+          </Button>
         </Fieldset.Root>
         <Text as="p">
           Not a member? {""}
-          <Text as={Link} to="/register" fontWeight="bold" color="green.400">
+          <Text as={Link} to="/register" fontWeght="bold" color="green.400">
             Register
           </Text>
         </Text>

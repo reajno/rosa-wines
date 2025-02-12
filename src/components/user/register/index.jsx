@@ -10,22 +10,31 @@ import {
 import { Field } from "@/components/ui/field";
 import { PasswordInput } from "@/components/ui/password-input";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import useAuth from "@/hooks/useAuth";
+import { toaster } from "@/components/ui/toaster";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { register } = useAuth();
-
+  const { isLoading, register } = useAuth();
+  const navigate = useNavigate();
   const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
       await register(email, password);
+      toaster.create({
+        description: `User registered, Welcome!`,
+        type: "success",
+      });
+      navigate("/", { replace: true });
     } catch (err) {
-      console.log(err);
+      toaster.create({
+        description: `${err.message}`,
+        type: "error",
+      });
     }
   };
 
@@ -54,6 +63,7 @@ const Register = () => {
             Submit
           </Button>
         </Fieldset.Root>
+        {isLoading ? "LOADING..." : " "}
         <Text as="p">
           Already have an account? {""}
           <Text as={Link} to="/login" fontWeght="bold" color="green.400">
