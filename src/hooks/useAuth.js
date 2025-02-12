@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../../supabase/supabaseClient";
+import validate from "@/utils/validateFormInput";
 
 const useAuth = () => {
   const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -11,7 +12,6 @@ const useAuth = () => {
         data: { user },
       } = await supabase.auth.getUser();
       setUser(user);
-      setIsLoading(false);
     };
 
     fetchUser();
@@ -24,16 +24,33 @@ const useAuth = () => {
   }, []);
 
   const login = async (email, password) => {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    if (error) throw error;
+    setIsLoading(true);
+    try {
+      validate(email, password);
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      if (error) throw error;
+      if (data.user) return data;
+    } catch (error) {
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const register = async (email, password) => {
-    const { error } = await supabase.auth.signUp({ email, password });
-    if (error) throw error;
+    setIsLoading(true);
+    try {
+      validate(email, password);
+      const { error } = await supabase.auth.signUp({ email, password });
+      if (error) throw error;
+    } catch (error) {
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const logout = async () => {
