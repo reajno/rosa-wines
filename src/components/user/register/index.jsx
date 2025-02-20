@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   VStack,
   Text,
@@ -16,15 +15,17 @@ import useAuth from "@/hooks/useAuth";
 import { toaster } from "@/components/ui/toaster";
 
 const Register = () => {
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isLoading, register } = useAuth();
+  const { register } = useAuth();
   const navigate = useNavigate();
   const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
       await register(email, password);
+      setLoading(true);
       toaster.create({
         description: `User registered, Welcome!`,
         type: "success",
@@ -35,6 +36,8 @@ const Register = () => {
         description: `${err.message}`,
         type: "error",
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -63,7 +66,7 @@ const Register = () => {
             Submit
           </Button>
         </Fieldset.Root>
-        {isLoading ? "LOADING..." : " "}
+
         <Text as="p">
           Already have an account? {""}
           <Text as={Link} to="/login" fontWeght="bold" color="green.400">

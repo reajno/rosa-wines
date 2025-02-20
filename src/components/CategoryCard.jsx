@@ -17,7 +17,7 @@ const CategoryCard = ({ title, src }) => {
       <VStack spacing={2} w="100%" h="100%">
         <Image src={src} alt="red wine" rounded="md" />
         <HStack alignSelf={"flex-start"}>
-          <Text as={"h2"} textStyle="lg">
+          <Text as={"h2"} textStyle="lg" color="black" fontWeight="bold">
             {title}
           </Text>
           <RiArrowRightLine />

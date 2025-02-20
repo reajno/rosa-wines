@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { Container, Box, Text, VStack, Flex } from "@chakra-ui/react";
+import { Container, Box, Text, VStack } from "@chakra-ui/react";
 
 const HeroSection = () => {
   return (

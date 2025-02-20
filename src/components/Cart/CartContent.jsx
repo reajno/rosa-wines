@@ -11,8 +11,7 @@ import {
 import useCartStore from "../../hooks/useCartStore";
 
 const Cart = () => {
-  const { cart, addToCart, removeFromCart, clearCart, totalItems } =
-    useCartStore();
+  const { cart, addToCart, removeFromCart } = useCartStore();
 
   return (
     <>
@@ -35,7 +34,6 @@ const Cart = () => {
                       {item.name}
                     </Text>
                   </HStack>
-                  {/* Price + Qty */}
                   <VStack>
                     <HStack
                       gap={0}

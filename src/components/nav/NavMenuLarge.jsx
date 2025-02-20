@@ -1,7 +1,8 @@
 import { RiArrowDownLine } from "react-icons/ri";
 import { Button } from "../ui/button";
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../ui/menu";
-import { Link, HStack, Box } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const NavMenuLarge = () => {
   return (
@@ -10,23 +11,27 @@ const NavMenuLarge = () => {
         <MenuTrigger asChild>
           <HStack>
             <Button variant="ghost">
-              Menu
+              Our Wines
               <RiArrowDownLine />
             </Button>
           </HStack>
         </MenuTrigger>
         <MenuContent>
-          <MenuItem asChild>
-            <Link href="#">Item 1</Link>
+          <MenuItem asChild value="all" style={{ cursor: "pointer" }}>
+            <Link to="/products">All</Link>
           </MenuItem>
-          <MenuItem asChild>
-            <Link href="#">Item 2</Link>
+          <MenuItem asChild value="red" style={{ cursor: "pointer" }}>
+            <Link to="/products/category/red">Red</Link>
+          </MenuItem>
+          <MenuItem asChild value="white" style={{ cursor: "pointer" }}>
+            <Link to="/products/category/white">White</Link>
+          </MenuItem>
+          <MenuItem asChild value="sparkling" style={{ cursor: "pointer" }}>
+            <Link to="/products/category/sparkling">Sparkling</Link>
           </MenuItem>
         </MenuContent>
       </MenuRoot>
-      <Button as="a" href="#" variant="ghost">
-        Sale
-      </Button>
+      <Button variant="ghost">Sale</Button>
       <Button variant="ghost">About</Button>
       <Button variant="ghost">Contact</Button>
     </HStack>

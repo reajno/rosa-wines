@@ -3,7 +3,6 @@ import { PasswordInput } from "@/components/ui/password-input";
 import { toaster } from "@/components/ui/toaster";
 import useAuth from "@/hooks/useAuth";
 import {
-  Box,
   Container,
   VStack,
   Text,
@@ -14,24 +13,22 @@ import {
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-// user: yesiy37805@sectorid.com
-// pass: qwerty123
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isLoading, login, logout } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    const prevRoute = location.state?.from?.pathname;
 
     try {
       const data = await login(email, password);
-
       if (data.user) {
-        const redirectPath = location.state?.from?.pathname || "/";
+        const redirectPath =
+          prevRoute !== "/login" && prevRoute !== "/register" ? prevRoute : "/";
         navigate(redirectPath, { replace: true });
       }
       toaster.create({
@@ -69,9 +66,6 @@ const Login = () => {
           </Fieldset.Content>
           <Button type="submit" onClick={handleLogin}>
             Submit
-          </Button>
-          <Button type="submit" onClick={logout}>
-            Logout
           </Button>
         </Fieldset.Root>
         <Text as="p">

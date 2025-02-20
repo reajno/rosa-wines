@@ -1,4 +1,4 @@
-import { Image, Box, Button, VStack, Center, Text } from "@chakra-ui/react";
+import { Image, Box, VStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import AddToCartButton from "../Cart/AddToCartButton";
 

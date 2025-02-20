@@ -4,7 +4,7 @@ import validate from "@/utils/validateFormInput";
 
 const useAuth = () => {
   const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -12,6 +12,7 @@ const useAuth = () => {
         data: { user },
       } = await supabase.auth.getUser();
       setUser(user);
+      setIsLoading(false);
     };
 
     fetchUser();
@@ -20,7 +21,7 @@ const useAuth = () => {
       setUser(session?.user || null);
     });
 
-    return () => listener?.subscription.unsubscribe();
+    return () => listener?.subscription?.unsubscribe();
   }, []);
 
   const login = async (email, password) => {

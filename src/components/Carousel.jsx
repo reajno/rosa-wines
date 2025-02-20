@@ -1,8 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box } from "@chakra-ui/react";
-import CategoryCard from "./CategoryCard";
-import { pinotGrigio } from "@/utils/assets";
 import Slider from "react-slick";
 
 const Carousel = () => {
