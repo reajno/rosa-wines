@@ -2,8 +2,8 @@ import { IconButton } from "@chakra-ui/react";
 import { RiUserLine } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import { MenuRoot, MenuTrigger, MenuContent, MenuItem } from "../ui/menu";
-import useAuth from "@/hooks/useAuth";
 import { toaster } from "../ui/toaster";
+import useAuth from "@/hooks/useAuth";
 
 const Account = () => {
   const location = useLocation();

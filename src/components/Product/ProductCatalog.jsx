@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 import { SimpleGrid } from "@chakra-ui/react";
 import SectionHeading from "../Sections/SectionHeading";
 import useProduct from "@/hooks/useProduct";
-import LoadingSpinner from "../LoadingSpinner";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 const ProductCatalog = ({ type }) => {
   const { products, loading, error } = useProduct();
